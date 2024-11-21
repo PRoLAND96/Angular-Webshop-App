@@ -36,8 +36,12 @@ Before you begin, ensure you have the following installed:
    ```bash
    git clone https://github.com/PRoLAND96/Angular-Webshop-App.git
    ```
-
-2. Install dependencies:
+2. Clone the server's repository:
+   
+   ```bash
+   git clone https://github.com/PRoLAND96/server.git
+   ```
+4. Install dependencies:
    ```bash
    npm install
    ```
