@@ -1,27 +1,53 @@
 # AngularWebshopApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+This project is a simple storefront built with Angular, showcasing various Angular concepts including standalone apps, modules, services, components, and routing. In this tutorial, users will learn how to perform basic CRUD (Create, Read, Update, Delete) operations on products.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Standalone App:** Built as a standalone Angular app for better modularity and scalability.
+- **Modules:** Leverages Angular modules to enhance organization and maintainability.
+- **Services:**  Demonstrates the use of Angular services for handling data and business logic.
+- **Components:** Features reusable components for various storefront sections, such as product listings, editing, and addition.
+- **Routing:**  Implements Angular's built-in routing for seamless navigation between application pages.
+- **CRUD Operations:** Enables users to perform Create, Read, Update, and Delete operations on product data.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+Before you begin, ensure you have the following installed:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/)
+- Angular CLI: `npm install -g @angular/cli`
+- [Prime NG](https://primeng.org/)
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository:
 
-## Further help
+   ```bash
+   git clone https://github.com/PRoLAND96/Angular-Webshop-App.git
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+1. Run the development server:
+   ```bash
+   ng serve
+   ```
+2. Open your browser and navigate to http://localhost:4200/ to see the app in action.
+
+
