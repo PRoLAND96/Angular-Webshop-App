@@ -1,0 +1,27 @@
+<div class="filter-container">
+  <button
+    type="button"
+    pButton
+    icon = "pi pi-filter"
+    (click)="toggleFilter()"
+    label = " Sort"
+    class="sort-btn"
+  >
+  </button>
+
+  <div *ngIf="showFilter" class="filter-panel">
+    <h3>Sort by price</h3>
+    <p-slider
+      [(ngModel)]="priceRange"
+      [range]="true"
+      [min]="minPrice"
+      [max]="maxPrice"
+      (onSlideEnd)="applyFilter()"
+      styleClass="slider"
+    ></p-slider>
+    <br>
+    <div class="range">
+      <span class="min">{{ priceRange[0] }}</span>
+      <span class="max">{{ priceRange[1] }}</span>
+    </div>
+  </div>

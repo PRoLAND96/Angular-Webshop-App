@@ -10,14 +10,18 @@
     class="add-product-btn"
   ></button>
 
+  <app-filter (filterChange)="onPriceFilterChange($event)"></app-filter>
+
   <!-- Products Section -->
-  <div class="row wrap gap-2 space-between">
-    <app-product
-      *ngFor="let product of products"
-      [product]="product"
-      (edit)="toggleEditPopup($event)"
-      (delete)="toggleDeletePopup($event)"
-    ></app-product>
+  <div class="products-container">
+    <ng-container *ngFor="let product of products">
+      <app-product
+        *ngIf="isProductInPriceRange(product)"
+        [product]="product"
+        (edit)="toggleEditPopup($event)"
+        (delete)="toggleDeletePopup($event)"
+      ></app-product>
+    </ng-container>
   </div>
 
   <!-- Paginator -->

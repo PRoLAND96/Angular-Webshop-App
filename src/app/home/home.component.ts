@@ -6,11 +6,13 @@ import { CommonModule } from '@angular/common';
 import { Paginator, PaginatorModule } from 'primeng/paginator';
 import { EditPopupComponent } from '../components/edit-popup/edit-popup.component';
 import { ButtonModule } from 'primeng/button';
+import { FilterComponent } from '../components/filter/filter.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
+    FilterComponent,
     ProductComponent,
     CommonModule,
     PaginatorModule,
@@ -29,6 +31,8 @@ export class HomeComponent {
 
   totalRecords: number = 0;
   rows: number = 12;
+
+  priceRange: number[] = [0, 300]; 
 
   displayEditPopup: boolean = false;
   displayAddPopup: boolean = false;
@@ -82,6 +86,10 @@ export class HomeComponent {
 
   resetPaginator() {
     this.paginator?.changePage(0);
+  }
+
+  onPriceFilterChange(priceRange: number[]) {
+    this.priceRange = priceRange; // Frissítjük az aktuális szűrési feltételeket
   }
 
   fetchProducts(page: number, perPage: number) {
@@ -141,6 +149,11 @@ export class HomeComponent {
           console.log(error);
         },
       });
+  }
+
+  isProductInPriceRange(product: Product): boolean {
+    const price = parseFloat(product.price);
+    return price >= this.priceRange[0] && price <= this.priceRange[1];
   }
 
   ngOnInit() {
