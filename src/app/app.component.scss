@@ -1,0 +1,9 @@
+.wrapper {
+    height: auto;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--bg-color);
+
+    flex-grow: 1;
+    box-sizing: border-box;
+}
