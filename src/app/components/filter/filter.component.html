@@ -4,13 +4,13 @@
     pButton
     icon = "pi pi-filter"
     (click)="toggleFilter()"
-    label = " Sort"
+    label = " Filter"
     class="sort-btn"
   >
   </button>
 
   <div *ngIf="showFilter" class="filter-panel">
-    <h3>Sort by price</h3>
+    <h3>Filter by price</h3>
     <p-slider
       [(ngModel)]="priceRange"
       [range]="true"

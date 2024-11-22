@@ -45,7 +45,7 @@ export class EditPopupComponent {
 
   specialCharacterValidator(): ValidatorFn {
     return (control) => {
-      const hasSpecialCharacter = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(
+      const hasSpecialCharacter = /[!@#$%^&*()_+\-=\[\]{};:"\\|,.<>\/?]+/.test(
         control.value
       );
 
