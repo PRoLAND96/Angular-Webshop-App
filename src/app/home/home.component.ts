@@ -60,6 +60,8 @@ export class HomeComponent {
     image: '',
     price: '',
     rating: 0,
+    gender: 'Men',
+    category: 'Shirt'
   };
 
   onConfirmEdit(product: Product) {
@@ -67,12 +69,24 @@ export class HomeComponent {
       return;
     }
 
-    this.editProduct(product, this.selectedProduct.id);
+    const updatedProduct = {
+      ...this.selectedProduct,
+      gender: product.gender || 'Men',
+      category: product.category || 'Shoes',
+    };
+
+    this.editProduct(updatedProduct, this.selectedProduct.id);
     this.displayEditPopup = false;
   }
 
   onConfirmAdd(product: Product) {
-    this.addProduct(product);
+    const newProduct = {
+      ...product,
+      gender: product.gender || 'Men',
+      category: product.category || 'Shoes',
+    };
+  
+    this.addProduct(newProduct);
     this.displayAddPopup = false;
   }
 

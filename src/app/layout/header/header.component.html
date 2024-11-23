@@ -1,15 +1,23 @@
 <header class="wrapper row full-center">
-    <!-- Logo image -->
-    <img src="assets/images/oc-logo.svg" alt="Logo image" class="logo" />
-  
-    <!-- Navigation -->
-    <div class="row gap-1">
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >Home</a
-      >
-      <a routerLink="/about-us" routerLinkActive="active">About</a>
-    </div>
-  </header>
+  <!-- Logo image -->
+  <div class="logo">
+    <img
+      class="logo-icon"
+      src="assets/images/angular_white.png"
+      alt="Angular logo"
+    />
+    <span>Whebshop</span>
+    <span>App</span> 
+  </div>
+
+  <!-- Navigation -->
+  <div class="row gap-1">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a routerLink="/about-us" routerLinkActive="active">About</a>
+  </div>
+</header>

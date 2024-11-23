@@ -39,6 +39,8 @@ export class EditPopupComponent {
     image: '',
     price: '',
     rating: 0,
+    gender: 'Men',
+    category: 'Shirt',
   };
 
   @Output() confirm = new EventEmitter<Product>();
@@ -58,6 +60,8 @@ export class EditPopupComponent {
     image: [''],
     price: ['', [Validators.required]],
     rating: [0],
+    gender: ['Men'],
+    category: ['Shoes'],
   });
 
   ngOnChanges() {
@@ -65,13 +69,16 @@ export class EditPopupComponent {
   }
 
   onConfirm() {
-    const { name, image, price, rating } = this.productForm.value;
+    const { name, image, price, rating, gender, category } =
+      this.productForm.value;
 
     this.confirm.emit({
       name: name || '',
       image: image || '',
       price: price || '',
       rating: rating || 0,
+      gender: gender as 'Men' | 'Women',
+      category: category as 'Shirt' | 'Shoes' | 'Pants' | 'Sweater',
     });
 
     this.display = false;

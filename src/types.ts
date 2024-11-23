@@ -42,6 +42,8 @@ export interface Product {
   name: string;
   image: string;
   rating: number;
+  gender: 'Men' | 'Women'; 
+  category: 'Shoes' | 'Pants' | 'Sweater' | 'Shirt'; 
 }
 
 export interface PaginationParams {
